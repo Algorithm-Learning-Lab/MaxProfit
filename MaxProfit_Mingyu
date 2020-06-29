@@ -1,0 +1,13 @@
+def solution(A) :
+  TempMax = MaxProfit = 0
+  MinPrice = A[0]
+  for a in A :
+    TempMax = a - MinPrice
+    if a < MinPrice :
+      MinPrice = a
+    MaxProfit = max(MaxProfit, TempMax)
+  return max(0, MaxProfit)
+
+A = [23171, 21011, 21123, 21366, 21013, 21367]
+
+print(solution(A))
